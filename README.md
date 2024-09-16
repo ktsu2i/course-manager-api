@@ -1,25 +1,22 @@
-# README
+# Course Manager API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development
 
-Things you may want to cover:
+To generate a new model:
 
-* Ruby version
+```
+docker-compose run api rails generate model Course record_key:string...
+```
 
-* System dependencies
+To create & migrate the database:
 
-* Configuration
+```
+docker-compose run api rails db:create
+docker-compose run api rails db:migrate
+```
 
-* Database creation
+To go inside the PostgreSQl container:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# course-manager-api
+```
+docker-compose exec db psql -U "username" -d "database_name"
+```
