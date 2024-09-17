@@ -19,8 +19,9 @@ class Api::CoursesController < ApplicationController
   end
 
   def destroy
-    @course = Course.find(params[:id])
-    @course.destroy
+    @course = Course.find(params[:id]) # find course by id
+    record_key = @course.record_key # get the record key
+    Course.where(record_key: record_key).destroy_all # delete all courses with the same record key
   end
 
   private
