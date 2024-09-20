@@ -140,10 +140,12 @@ GEM
     pg (1.5.8)
     psych (5.1.2)
       stringio
-    puma (6.4.2)
+    puma (6.4.3)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.7)
+    rack-cors (2.0.2)
+      rack (>= 2.0.0)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -252,6 +254,7 @@ DEPENDENCIES
   debug
   pg
   puma (>= 5.0)
+  rack-cors
   rails (~> 7.2.1)
   rubocop-rails-omakase
   tzinfo-data
