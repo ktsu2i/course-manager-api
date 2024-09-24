@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  mount_devise_token_auth_for "User", at: "auth"
   namespace :api do
     resources :courses, only: [ :index, :show, :create, :update, :destroy ]
   end
