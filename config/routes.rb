@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   namespace :api do
     resources :courses, only: [ :index, :show, :create, :update, :destroy ]
   end
