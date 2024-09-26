@@ -7,7 +7,7 @@ services:
     volumes:
       - ".:/rails"
     environment:
-      - DATABASE_PASSWORD=postgres
+      - DATABASE_PASSWORD=tuj
     tty: true
     stdin_open: true
     depends_on:
@@ -17,17 +17,16 @@ services:
 
   db:
     container_name: db
-    image: postgres:16.0
+    image: mysql:8.0
     ports:
-      - "5433:5432"
-    command: -p 5433
+      - "3306:3306"
     volumes:
-      - "db-data:/var/lib/postgresql/data"
+      - "db-data:/var/lib/mysql"
     environment:
-      - "POSTGRES_DATABASE=postgres"
-      - "POSTGRES_USER=postgres"
-      - "POSTGRES_PASSWORD=postgres"
-      - "POSTGRES_ROOT_PASSWORD=root"
+      - "MYSQL_DATABASE=course-manager_development"
+      - "MYSQL_USER=tuj"
+      - "MYSQL_PASSWORD=tuj"
+      - "MYSQL_ROOT_PASSWORD=root"
     networks:
       - course-manager-network
 

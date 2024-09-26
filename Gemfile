@@ -28,7 +28,10 @@ gem "bootsnap", require: false
 gem "rack-cors"
 
 # PostgreSQL adapter
-gem "pg"
+# gem "pg"
+
+# MySQL adapter
+gem "mysql2"
 
 # User authentication library
 gem "devise"

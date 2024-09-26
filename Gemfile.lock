@@ -117,6 +117,7 @@ GEM
     minitest (5.25.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
+    mysql2 (0.5.6)
     net-imap (0.4.16)
       date
       net-protocol
@@ -144,7 +145,6 @@ GEM
     parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
-    pg (1.5.8)
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -261,7 +261,7 @@ DEPENDENCIES
   devise_token_auth
   logger
   mutex_m
-  pg
+  mysql2
   puma (>= 5.0)
   rack-cors
   rails (~> 7.0.4)
