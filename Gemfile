@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 7.0.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -28,7 +28,19 @@ gem "bootsnap", require: false
 gem "rack-cors"
 
 # PostgreSQL adapter
-gem "pg"
+# gem "pg"
+
+# MySQL adapter
+gem "mysql2"
+
+# User authentication library
+gem "devise"
+gem "devise_token_auth"
+
+gem "logger"
+gem "mutex_m"
+gem "base64"
+gem "bigdecimal"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
